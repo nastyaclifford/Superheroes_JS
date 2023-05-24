@@ -16,7 +16,7 @@ Hometask, JS Week 18, Local and Session Storage, Cookies, JSON
 
 4. Как очистить локальное хранилище в браузере?
 
-- *С помощью JS window.localStorage.clear()
+*- С помощью JS window.localStorage.clear()
 - C помощью очистики кэша*
 
 5. Для чего нужны куки JS?
