@@ -1,0 +1,57 @@
+.main-container{
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+.main-container_list{
+    display:grid;
+    grid-template-columns: 1fr 1fr; 
+
+}
+.main-title {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.list_item{
+margin: 1rem;
+padding: 1rem;
+border: thick double orangered;
+text-align: center;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+display: grid;
+}
+.item_name{
+   font-size: larger;
+   font-weight: 600;
+}
+.item_image{
+    max-width: 300px;
+    margin-left: auto;
+    margin-right:auto;
+}
+.item_info{
+    font-style: italic;
+    font-size: smaller;
+    margin-bottom: 3rem;
+}
+.rating {
+justify-self: center;
+align-self: end;
+font-size: 60px;
+color: gray
+}
+
+.rating_input {
+    display:none
+  }
+  .input-star{
+    font-size: 50px;
+    color: grey;
+  }
+  .rating_input[type="checkbox"] + .input-star {
+      cursor: pointer;
+     }
+  .rating_input[type="checkbox"]:checked + .input-star {
+      color: gold; 
+     }
+    
+
