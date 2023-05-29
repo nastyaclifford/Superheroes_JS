@@ -96,48 +96,48 @@ const heroes = JSON.parse(heroesJSON); // преобразовываем JSON в
 
 const createCard = (obj) => {
   // создаем функцию, которая создает разметку и помещает туда элементы из массива (список героев)
-  const item = document.createElement("div");
-  item.className = "list_item";
-  const name = document.createElement("div");
-  name.className = "item_name";
-  name.textContent = obj.name; //добавляем текстовое содержимое, вставляем объект из массива
-  const universe = document.createElement("div");
-  universe.className = "item_universe";
-  universe.textContent = `Вселенная:${obj.universe}`; //добавляем текстовое содержимое, вставляем объект из массива
-  const alterego = document.createElement("div");
-  alterego.className = "item_alterego";
-  alterego.textContent = `Альтер-эго:${obj.alterego}`; //добавляем текстовое содержимое, вставляем объект из массива
-  const occupation = document.createElement("div");
-  occupation.className = "item_occupation";
-  occupation.textContent = `Род деятельности:${obj.occupation}`; //добавляем текстовое содержимое, вставляем объект из массива
-  const friends = document.createElement("div");
-  friends.className = "item_friends";
-  friends.textContent = `Друзья:${obj.friends}`; //добавляем текстовое содержимое, вставляем объект из массива
-  const superpowers = document.createElement("div");
-  superpowers.className = "item_superpowers";
-  superpowers.textContent = `Суперсилы:${obj.superpowers}`; //добавляем текстовое содержимое, вставляем объект из массива
-  const image = document.createElement("img");
-  image.className = "item_image";
-  image.alt = "imageHero";
-  image.src = obj.url;
-  const info = document.createElement("div");
-  info.className = "item_info";
-  info.textContent = obj.info; //добавляем текстовое содержимое, вставляем объект из массива
+  const item = document.createElement("div"); // создаем переменную, которая создает div, который будет содержать в себе информацию о супергерое
+  item.className = "list_item"; //добавляем класс к созданному выше div
+  const name = document.createElement("div"); // создаем переменную, которая создает div, который будет содержать в себе имя супергероя
+  name.className = "item_name"; //добавляем класс к созданному выше div
+  name.textContent = obj.name; //добавляем текстовое содержимое для имени, вставляем объект из массива
+  const universe = document.createElement("div"); // создаем переменную, которая создает div, который будет содержать в себе вселенную супергероя
+  universe.className = "item_universe"; //добавляем класс к созданному выше div
+  universe.textContent = `Вселенная:${obj.universe}`; //добавляем текстовое содержимое для вселенной, вставляем объект из массива
+  const alterego = document.createElement("div"); // создаем переменную, которая создает div, который будет содержать в себе альтерэго супергероя
+  alterego.className = "item_alterego"; //добавляем класс к созданному выше div
+  alterego.textContent = `Альтер-эго:${obj.alterego}`; //добавляем текстовое содержимое для альтерэго, вставляем объект из массива
+  const occupation = document.createElement("div"); // создаем переменную, которая создает div, который будет содержать в себе вид деятельности супергероя
+  occupation.className = "item_occupation"; //добавляем класс к созданному выше div
+  occupation.textContent = `Род деятельности:${obj.occupation}`; //добавляем текстовое содержимое для вида деятельности, вставляем объект из массива
+  const friends = document.createElement("div"); // создаем переменную, которая создает div, который будет содержать в себе друзей супергероя
+  friends.className = "item_friends"; //добавляем класс к созданному выше div
+  friends.textContent = `Друзья:${obj.friends}`; //добавляем текстовое содержимое для друзей, вставляем объект из массива
+  const superpowers = document.createElement("div"); // создаем переменную, которая создает div, который будет содержать в себе способности супергероя
+  superpowers.className = "item_superpowers"; //добавляем класс к созданному выше div
+  superpowers.textContent = `Суперсилы:${obj.superpowers}`; //добавляем текстовое содержимое для способностей, вставляем объект из массива
+  const image = document.createElement("img"); // создаем переменную, которая создает img, который будет содержать в себе изображение супергероя
+  image.className = "item_image"; //добавляем класс к созданному выше img
+  image.alt = "imageHero"; // добавляем alt
+  image.src = obj.url; // добавляем src для img, вставляем объект из массива
+  const info = document.createElement("div"); // создаем переменную, которая создает div, который будет содержать в себе описание супергероя
+  info.className = "item_info"; // добавляем класс к созданному выше div
+  info.textContent = obj.info; //добавляем текстовое содержимое для описания, вставляем объект из массива
 
-  let ratingForm = document.createElement("form");
-  ratingForm.className = "rating";
-  ratingForm.id = "form";
-  let label1 = document.createElement("label");
-  let input1 = document.createElement("input");
-  input1.type = "checkbox";
-  input1.className = "rating_input";
-  input1.value = "1";
-  input1.name = "rating";
-  let span1 = document.createElement("span");
-  span1.className = "input-star";
-  span1.id = "1";
-  span1.textContent = "★";
-  let label2 = document.createElement("label");
+  let ratingForm = document.createElement("form"); // создаем по такому же принципу разметку для формы для рейтинга
+  ratingForm.className = "rating"; // добавляем класс
+  ratingForm.id = "form"; // добавляем id
+  let label1 = document.createElement("label"); // создаем разметку для label
+  let input1 = document.createElement("input"); // создаем разметку для input
+  input1.type = "checkbox"; // добавляем к input тип - checkbox
+  input1.className = "rating_input"; // добавляем к input класс
+  input1.value = "1"; // добавляем к input value
+  input1.name = "rating"; // добавляем к input имя
+  let span1 = document.createElement("span"); // создаем разметку для span, который будет содержать в себе звезду
+  span1.className = "input-star"; // добавляем к span класс
+  span1.id = "1"; // добавляем к span id
+  span1.textContent = "★"; // добавляем к span текстовое содержимое, в нашем случае - звезду
+  let label2 = document.createElement("label"); // далее по такому же принципу создаем label, input и span для оставшихся 4 звезд
   let input2 = document.createElement("input");
   input2.type = "checkbox";
   input2.className = "rating_input";
@@ -178,13 +178,13 @@ const createCard = (obj) => {
   span5.id = "5";
   span5.textContent = "★";
 
-  ratingForm.append(label1);
+  ratingForm.append(label1); // вставляем label-ы в ранее созданную форму
   ratingForm.append(label2);
   ratingForm.append(label3);
   ratingForm.append(label4);
   ratingForm.append(label5);
-  label1.append(input1);
-  label1.append(span1);
+  label1.append(input1); // вставляем input-ы в ранее созданную форму
+  label1.append(span1); // вставляем span-ы в ранее созданную форму
   label2.append(input2);
   label2.append(span2);
   label3.append(input3);
@@ -194,17 +194,17 @@ const createCard = (obj) => {
   label5.append(input5);
   label5.append(span5);
 
-  item.append(name);
-  item.append(universe);
-  item.append(alterego);
-  item.append(occupation);
-  item.append(friends);
-  item.append(superpowers);
-  item.append(image);
-  item.append(info);
-  item.append(ratingForm);
+  item.append(name); // вставляем имя супергероя в карточку
+  item.append(universe); // вставляем вселенную супергероя в карточку
+  item.append(alterego); // вставляем альтерэго супергероя в карточку
+  item.append(occupation); // вставляем вид деятельности супергероя в карточку
+  item.append(friends); // вставляем друзей супергероя в карточку
+  item.append(superpowers); // вставляем суперсилы супергероя в карточку
+  item.append(image); // вставляем изображение супергероя в карточку
+  item.append(info); // вставляем описание супергероя в карточку
+  item.append(ratingForm); // вставляем рейтинг со звездами в карточку
 
-  return item;
+  return item; // возвращаем карточку со всей заполненной информацией
 };
 
 const addCard = (objItem, container) => {
@@ -221,25 +221,29 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 heroesList.addEventListener("click", (event) => {
+  // создаем функцию, которая будет срабатывать при клике на звезды
   if (event.target.classList.contains("rating_input")) {
-    const form = event.target.parentNode.parentNode;
-    const inputs = form.querySelectorAll(".rating_input");
-    const icons = form.querySelectorAll(".input-star");
-    const listItem = form.parentNode;
-    const key = listItem.querySelector(".item_name").textContent;
-    const value = Number(event.target.value);
+    // создаем условие, которое определяет, сколько звезд нужно закрасить
+    const form = event.target.parentNode.parentNode; // создаем переменную и находим форму (дочерний элемент дочернего от родителя)
+    const inputs = form.querySelectorAll(".rating_input"); // создаем переменную и находим инпуты
+    const icons = form.querySelectorAll(".input-star"); // создаем переменную и находим спаны со звездами
+    const listItem = form.parentNode; // создаем переменную и находим элементы, содержащие информацию о герое (дочерний элемент от родителя, от формы)
+    const key = listItem.querySelector(".item_name").textContent; // создаем переменную и находим имя героя
+    const value = Number(event.target.value); // создаем переменную и преобразовываем в число value от инпута
 
     icons.forEach((elem, i) => {
+      //функция, которая изначально закрашивает все звезды в серый цвет
       elem.style = "color: grey;";
     });
 
     for (let i = 0; i < value; i++) {
+      //условие, которое перебирает звезды, и если их id < value выбранного инпута, то закрашивает в золотой цвет и прекращает цикл
       icons[i].style = "color: gold";
       if (inputs[i].checked) {
         inputs[i].checked = false;
         break;
       }
     }
-    localStorage.setItem(key, value);
+    localStorage.setItem(key, value); // выводим имя героя и значение рейтинга в localstorage
   }
 });
