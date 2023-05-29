@@ -238,9 +238,9 @@ heroesList.addEventListener("click", (event) => {
 
     for (let i = 0; i < value; i++) {
       //условие, которое перебирает звезды, и если их id < value выбранного инпута, то закрашивает в золотой цвет и прекращает цикл
-      icons[i].style = "color: gold";
+      icons[i].style = "color: gold"; // попадаем в цикл, звезда 1 - закрашиваем, потом смотрим, следующий инпут кликнут или нет >
       if (inputs[i].checked) {
-        inputs[i].checked = false;
+        inputs[i].checked = false; // если кликнут, то цикл завершается и дальше не идет окрашивание
         break;
       }
     }
